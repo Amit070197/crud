@@ -10,48 +10,62 @@
       </ul>
     </div>
   <% end %>
+  <div class="container img">
+<div class="row">
+<div class="col-6 mx-auto border border-2 border-primary rounded wrap">
+
 <table  class='table' >
-  <div class="field form-group">
+
+  <div class="field form-group input-container">
+    <i class="fa fa-user icon"></i>
     <%= form.label :name %>
-    <%= form.text_field :name,class:"form-control" %>
+    <%= form.text_field :name, class:"form-control border-info input-field" %>
   </div>
    <br>
   <div class="field form-group">
+    <i class="glyphicon glyphicon-home"></i>
     <%= form.label :address %>
-    <%= form.text_field :address,class:"form-control" %>
+    <%= form.text_field :address,class:"form-control border-info " %>
   </div>
 <br>
   <div class="field form-group">
-    <%= form.label :contact_number %>
-    <%= form.number_field :contact_number,class:"form-control" %>
+     <i class="fa fa-phone" aria-hidden="true"></i>
+     <%= form.label :contact_number %>
+    <%= form.number_field :contact_number,class:"form-control border-info" %>
   </div>
 <br>
 <br>
   <div class="field form-group">
+    <i class="fa fa-id-badge" style="font-size:20px"></i>
     <%= form.label :age %>
-    <%= form.number_field :age,class:"form-control" %>
+    <%= form.number_field :age,class:"form-control border-info" %>
   </div>
 <br>
 <br>
   <div class="field form-group">
+  <i class="fa fa-envelope icon"></i>
     <%= form.label :email %>
-    <%= form.text_field :email,class:"form-control" %>
+    <%= form.text_field :email,class:"form-control border-info" %>
   </div>
 <br>
 <div class="field">
+<i class='far fa-calendar-alt' style='font-size:24px'></i>
 <%= form.label :date %>
-<%= form.date_select :date %>
+<%= form.date_select :date%>
 </div>
 
 
 <br>
-  <div class="field form-group">
+  <div class="field form-group ">
     <%= form.number_field :user_id , id: :friend_user_id, class:"form-control",value:current_user.id,type: :hidden %>
   </div>
   
 <br>
-  <div class="actions">
+  <div class="actions ">
     <%= form.submit 'Book Appointment ',class:"btn btn-outline-primary"%>
   </div>
   </table>
+  </div>
+  </div>
+  </div>
 <% end %>
